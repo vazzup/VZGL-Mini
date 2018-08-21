@@ -16,11 +16,11 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/libs)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 # Turn on Optimised debugging for gdb
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
+# Add CXXFLAGS
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -pg -O3")
 
 #####################################################
 # Renderer Configuration
 #####################################################
 # Build the program
-add_executable(CameraProcess src/maincamera.cpp src/lanedetection.cpp)
-# Link Camera Executable to OpenCV Libs
-target_link_libraries(CameraProcess ${OpenCV_LIBS})
+add_executable(render src/main.cpp src/tgaimage.cpp src/wireframe.cpp src/model.cpp)

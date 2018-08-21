@@ -1,3 +1,12 @@
+# CMake
+Makefile
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+
+# Program Output
+*.tga
+
 # Folders
 bin
 libs
